@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>API CLIENT</title>
+	<style>
+		.form {
+			width: 800px;
+			margin: 10px auto;
+		}
+		.response {
+			margin: 10px auto;
+			width: 900px;
+			padding: 10px;
+			border: 1px solid #333333;
+		}
+		.response pre {
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="form">
+		<form id="apiform" method="post" action="client.php">
+			Формат отправки:<br>
+			<label><input checked type="radio" id="contactChoice1" name="typeRequest" value="XML" required>
+			XML</label><br>
+			
+			<label><input type="radio" id="contactChoice1" name="typeRequest" value="JSON" required>
+			JSON</label><br><br>
+			
+			Выберите подменяемые данные:<br>
+			<select name="creditScore" id="creditScore">
+				<option selected></option>
+				<option value='good'>good - 700</option>
+				<option value='bad'>bad - 300</option>	
+				<option value='error'>error</option></select>	
+			<p><input type="submit" value="Отправить запрос"></p>
+		</form>
+	</div>
+	<br><hr>
+	<p style="text-align: center;" >Результат распознавания ответа и сам ответ:</p>
+	<div class="response">
+		<pre id="block">
+
+		</pre>
+	</div>
+	<script type='text/javascript' src='jquery.js'></script>
+	<script type='text/javascript' src='script.js'></script>
+
+</body>
+</html>
