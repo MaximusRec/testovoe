@@ -1,6 +1,4 @@
-/**
- * Created by Rain on 21.07.2017.
- */
+
 var sendForm = function(e) {
 	e.preventDefault();
 	var t = $(this);
